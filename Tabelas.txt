@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS public.tb_cliente
+(
+    id_cliente integer NOT NULL DEFAULT nextval('tb_cliente_id_cliente_seq'::regclass),
+    cli_nome text COLLATE pg_catalog."default",
+    cli_sobrenome text COLLATE pg_catalog."default",
+    cli_cpf text COLLATE pg_catalog."default",
+    cli_genero text COLLATE pg_catalog."default",
+    cli_email text COLLATE pg_catalog."default",
+    cli_telefone text COLLATE pg_catalog."default",
+    cli_senha text COLLATE pg_catalog."default",
+    cli_status text COLLATE pg_catalog."default",
+    CONSTRAINT tb_cliente_pkey PRIMARY KEY (id_cliente)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tb_cliente
+    OWNER to postgres;
